@@ -5,7 +5,7 @@
 	<supports-screens android:resizeable="true" android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:xlargeScreens="true"></supports-screens>
 	
 	<application android:label="HealthFit.Android" android:theme="@style/MainTheme" android:icon="@drawable/icon">
-		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyCwG85ikMCkvWOXhEyojgS5aU5dhyd5pzk"></meta-data>
+		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="Your API"></meta-data>
 		<uses-library android:name="org.apache.http.legacy" android:required="false"></uses-library>
 	</application>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
