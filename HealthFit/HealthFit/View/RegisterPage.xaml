@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealthFit.View.RegisterPage"
+             BackgroundColor="#FFDEAD"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:vm="clr-namespace:HealthFit.ViewModel"
+             Title="{Binding Title}"
+             >
+
+    <ContentPage.BindingContext>
+        <vm:RegisterPageViewModel></vm:RegisterPageViewModel>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <Frame BackgroundColor="#F5F5F5" Padding="24" CornerRadius="0">
+            <Label Text="Health and Fit" HorizontalTextAlignment="Center" TextColor="#696969" FontSize="36" FontAttributes="Bold"/>
+        </Frame>
+
+        <Image Source="icon.png" VerticalOptions="Center" HeightRequest="64" WidthRequest="64"></Image>
+
+        <StackLayout BackgroundColor="#F5F5F5" Margin="20" Padding="20">
+            <Label Text="Creează un profil" HorizontalTextAlignment="Center" TextColor="#696969" FontSize="24" FontAttributes="Bold"></Label>
+
+            <Label Text="Numele de familie *: " FontSize="18" FontAttributes="Bold" TextColor="#696969"></Label>
+            <Entry x:Name="fnameEntry" TextColor="#696969" Placeholder="Numele de familie" PlaceholderColor="#696969"></Entry>
+
+            <Label Text="Prenumele *: " FontSize="18" FontAttributes="Bold" TextColor="#696969"></Label>
+            <Entry x:Name="lnameEntry" TextColor="#696969" Placeholder="Prenumele" PlaceholderColor="#696969"></Entry>
+
+            <Label Text="Data nașterii: " FontSize="18" FontAttributes="Bold" TextColor="#696969"></Label>
+            <DatePicker x:Name="bdayEntry" MinimumDate="01/01/1900" BackgroundColor="#F5F5F5" TextColor="#696996"></DatePicker>
+
+            <Button Text="Creează" HorizontalOptions="Center" BackgroundColor="#FFDEAD" TextColor="#696969" FontAttributes="Bold" FontSize="14" Clicked="Button_Clicked"></Button>
+
+            <Label Text="(!) - Câmpurile cu '*' trebuie completate obligatoriu!" TextColor="#696969" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="EndAndExpand" Padding="5"></Label>
+        </StackLayout>
+    </StackLayout>
+
+
+</ContentPage>

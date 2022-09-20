@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealthFit.View.FoodListPageView"
+             xmlns:vm="clr-namespace:HealthFit.ViewModel"
+             BackgroundColor="#FFDEAD"
+             >
+
+    <ContentPage.BindingContext>
+        <vm:FoodListPageViewModel></vm:FoodListPageViewModel>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <SearchBar Placeholder="Caută alimentul dorit..." PlaceholderColor="#696969" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextChanged="SearchBar_TextChanged"></SearchBar>
+        <StackLayout BackgroundColor="#F5F5F5">
+            <ListView x:Name="myFoodList" SeparatorColor="Black" ItemsSource="{Binding FoodsList}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding FoodName}" Detail="{Binding FoodDetails}" TextColor="Black" DetailColor="#696969"></TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </StackLayout>
+
+
+</ContentPage>

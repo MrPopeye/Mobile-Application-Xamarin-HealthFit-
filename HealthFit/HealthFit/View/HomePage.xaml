@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealthFit.View.HomePage"
+             xmlns:vm="clr-namespace:HealthFit.ViewModel"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#FFDEAD"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             android:TabbedPage.ToolbarPlacement="Bottom"
+             android:TabbedPage.BarItemColor="#696969"
+             android:TabbedPage.BarSelectedItemColor ="Black"
+             Title="{Binding Title}"
+             BarBackgroundColor="#F5F5F5"
+             BarTextColor="#696969"
+             >
+
+    <ContentPage Title="Home Page" IconImageSource="homeIcon.png">
+        
+        <ContentPage.BindingContext>
+            <vm:HomePageViewModel></vm:HomePageViewModel>
+        </ContentPage.BindingContext>
+
+        <StackLayout>
+            <Frame BackgroundColor="#F5F5F5" Margin="20" CornerRadius="30">
+                <StackLayout>
+                    <Label Text="Bine ai venit" HorizontalTextAlignment="Center" HorizontalOptions="Center" FontAttributes="Bold" TextColor="#696969" FontSize="20" Margin="5"></Label>
+                    <Label HorizontalTextAlignment="Center" HorizontalOptions="Center" TextColor="#696969" FontSize="15">
+                        <Label.Text>
+                            <MultiBinding StringFormat="{}{0} {1}">
+                                <Binding Path="NameF"></Binding>
+                                <Binding Path="NameP"></Binding>
+                            </MultiBinding>
+                        </Label.Text>
+                    </Label>
+                </StackLayout>
+            </Frame>
+
+            <Image Source="icon.png" VerticalOptions="Center" HeightRequest="64" WidthRequest="64"></Image>
+                
+            <ScrollView>
+                <StackLayout BackgroundColor="Transparent">
+                    <Frame BackgroundColor="#F5F5F5" Margin="10" CornerRadius="30">
+                        <StackLayout>
+                            <Label Text="Informații despre corpul tău" HorizontalTextAlignment="Center" HorizontalOptions="Center" FontAttributes="Bold" TextColor="#696969" FontSize="20">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizerInfo_Tapped"></TapGestureRecognizer>
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <FlexLayout BackgroundColor="Transparent" AlignItems="Center">
+                                <Label Text="Înălțime(cm): " HorizontalOptions="Start" TextColor="#696969" FontSize="18"></Label>
+                                <Label Text="{Binding PersonHeight}" HorizontalOptions="Start" TextColor="#696969" FontSize="18"></Label>
+                            </FlexLayout>
+                            <FlexLayout BackgroundColor="Transparent" AlignItems="Center">
+                                <Label Text="Greutate(kg): " HorizontalOptions="Start" TextColor="#696969" FontSize="18"></Label>
+                                <Label Text="{Binding PersonWeight}" HorizontalOptions="Start" TextColor="#696969" FontSize="18"></Label>
+                            </FlexLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame BackgroundColor="#F5F5F5" Margin="10" CornerRadius="30">
+                        <StackLayout>
+                            <Label Text="Lista calorii alimente" HorizontalTextAlignment="Center" HorizontalOptions="Center" FontAttributes="Bold" TextColor="#696969" FontSize="20">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureListFood_Tapped"></TapGestureRecognizer>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame BackgroundColor="#F5F5F5" Margin="10" CornerRadius="30">
+                        <StackLayout>
+                            <Label Text="Locații instituții de sănătate" HorizontalTextAlignment="Center" HorizontalOptions="Center" FontAttributes="Bold" TextColor="#696969" FontSize="20">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureMedicMap_Tapped"></TapGestureRecognizer>
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <Label Text="- Spitale, Farmacii și Clinici -" HorizontalTextAlignment="Center" HorizontalOptions="Center" TextColor="#696969" FontSize="18"></Label>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame BackgroundColor="#F5F5F5" Margin="10" CornerRadius="30">
+                        <StackLayout>
+                            <Label Text="Editează profilul" HorizontalTextAlignment="Center" HorizontalOptions="Center" FontAttributes="Bold" TextColor="#696969" FontSize="20">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureEditProfile_Tapped"></TapGestureRecognizer>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </StackLayout>
+                    </Frame>
+
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage>
+
+    <ContentPage Title="Home Workout" IconImageSource="homeWorkout.png">
+        <StackLayout>
+            <Frame BackgroundColor="#F5F5F5" Margin="20" CornerRadius="30">
+                <StackLayout>
+                    <Image Source="homeWorkoutColor.png" VerticalOptions="Center" HeightRequest="64" WidthRequest="64"></Image>
+                    <Label Text="Antrenament Acasă" HorizontalTextAlignment="Center" HorizontalOptions="Center" FontAttributes="Bold" TextColor="#696969" FontSize="20"></Label>
+                    <Label Text="- 7 zile -" HorizontalTextAlignment="Center" HorizontalOptions="Center" FontAttributes="Bold" TextColor="#696969" FontSize="15"></Label>
+                    <ScrollView>
+                        <StackLayout BackgroundColor="Transparent">
+                            <Label Text="Ziua 1" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" TextColor="#696969" FontSize="18" Margin="10"></Label>
+                            <Frame BackgroundColor="#ffdead" HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="30">
+                                <Button Text="Incepe antrenamentul" FontSize="14" FontAttributes="Bold" BackgroundColor="Transparent" TextColor="#696969" HorizontalOptions="Start" VerticalOptions="Start" Clicked="DayOneButton_Clicked"></Button>
+                            </Frame>
+
+                            <Label Text="Ziua 2" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" TextColor="#696969" FontSize="18" Margin="10"></Label>
+                            <Frame BackgroundColor="#ffdead" HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="30">
+                                <Button Text="Incepe antrenamentul" FontSize="14" FontAttributes="Bold" BackgroundColor="Transparent" TextColor="#696969" HorizontalOptions="Start" VerticalOptions="Start" Clicked="DayTwoButton_Clicked"></Button>
+                            </Frame>
+
+                            <Label Text="Ziua 3" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" TextColor="#696969" FontSize="18" Margin="10"></Label>
+                            <Frame BackgroundColor="#ffdead" HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="30">
+                                <Button Text="Incepe antrenamentul" FontSize="14" FontAttributes="Bold" BackgroundColor="Transparent" TextColor="#696969" HorizontalOptions="Start" VerticalOptions="Start" Clicked="DayThreeButton_Clicked"></Button>
+                            </Frame>
+
+                            <Label Text="Ziua 4" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" TextColor="#696969" FontSize="18" Margin="10"></Label>
+                            <Frame BackgroundColor="#ffdead" HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="30">
+                                <Button Text="Incepe antrenamentul" FontSize="14" FontAttributes="Bold" BackgroundColor="Transparent" TextColor="#696969" HorizontalOptions="Start" VerticalOptions="Start" Clicked="DayFourButton_Clicked"></Button>
+                            </Frame>
+
+                            <Label Text="Ziua 5" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" TextColor="#696969" FontSize="18" Margin="10"></Label>
+                            <Frame BackgroundColor="#ffdead" HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="30">
+                                <Button Text="Incepe antrenamentul" FontSize="14" FontAttributes="Bold" BackgroundColor="Transparent" TextColor="#696969" HorizontalOptions="Start" VerticalOptions="Start" Clicked="DayFiveButton_Clicked"></Button>
+                            </Frame>
+
+                            <Label Text="Ziua 6" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" TextColor="#696969" FontSize="18" Margin="10"></Label>
+                            <Frame BackgroundColor="#ffdead" HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="30">
+                                <Button Text="Incepe antrenamentul" FontSize="14" FontAttributes="Bold" BackgroundColor="Transparent" TextColor="#696969" HorizontalOptions="Start" VerticalOptions="Start" Clicked="DaySixButton_Clicked"></Button>
+                            </Frame>
+
+                            <Label Text="Ziua 7" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" TextColor="#696969" FontSize="18" Margin="10"></Label>
+                            <Frame BackgroundColor="#ffdead" HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="30">
+                                <Button Text="Incepe antrenamentul" FontSize="14" FontAttributes="Bold" BackgroundColor="Transparent" TextColor="#696969" HorizontalOptions="Start" VerticalOptions="Start" Clicked="DaySevenButton_Clicked"></Button>
+                            </Frame>
+                        </StackLayout>
+                    </ScrollView>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage>
+
+</TabbedPage>

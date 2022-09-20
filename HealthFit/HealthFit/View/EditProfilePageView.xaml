@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealthFit.View.EditProfilePageView"
+             BackgroundColor="#FFDEAD"
+             xmlns:vm="clr-namespace:HealthFit.ViewModel"
+             >
+
+    <ContentPage.BindingContext>
+        <vm:EditProfileViewModel></vm:EditProfileViewModel>
+    </ContentPage.BindingContext>
+
+
+    <StackLayout Margin="10" BackgroundColor="Transparent">
+        <Frame BackgroundColor="#F5F5F5" Margin="20" CornerRadius="30">
+            <StackLayout>
+                <Label Text="Informații despre profilul tău" HorizontalTextAlignment="Center" HorizontalOptions="Center" FontAttributes="Bold" TextColor="#696969" FontSize="20" Margin="5"></Label>
+                <Label Text="- Editează -" HorizontalTextAlignment="Center" HorizontalOptions="Center" TextColor="#696969" FontSize="18"></Label>
+            </StackLayout>
+        </Frame>
+
+        <Frame BackgroundColor="#F5F5F5" Margin="10" CornerRadius="30">
+            <StackLayout BackgroundColor="Transparent">
+                <Label Text="Numele de familie:" HorizontalOptions="Start" FontAttributes="Bold" TextColor="#696969" FontSize="16" Margin="5"></Label>
+                <Entry x:Name="numefamilieEntry" TextColor="#696969" BackgroundColor="#FFDEAD"></Entry>
+                <Button Text="Editează" TextColor="White" BackgroundColor="DarkOrange" Clicked="NumeFamilieButton_Clicked"></Button>
+
+                <Label Text="Prenumele tău:" HorizontalOptions="Start" FontAttributes="Bold" TextColor="#696969" FontSize="16" Margin="5"></Label>
+                <Entry x:Name="prenumeEntry" TextColor="#696969" BackgroundColor="#FFDEAD"></Entry>
+                <Button Text="Editează" TextColor="White" BackgroundColor="DarkOrange" Clicked="PrenumeButton_Clicked"></Button>
+
+                <Label Text="Data de naștere:" HorizontalOptions="Start" FontAttributes="Bold" TextColor="#696969" FontSize="16" Margin="5"></Label>
+                <DatePicker x:Name="bday" MinimumDate="01/01/1900" BackgroundColor="#F5F5F5" TextColor="#696996"></DatePicker>
+                <Button Text="Editează" TextColor="White" BackgroundColor="DarkOrange" Clicked="BdateButton_Clicked"></Button>
+                
+                <Button Text="Șterge profilul" TextColor="White" BackgroundColor="Red" Margin="10" Clicked="DeleteAccButton_Clicked"></Button>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+
+
+
+</ContentPage>

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealthFit.View.WorkoutExView.DaySix"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             BackgroundColor="#FFDEAD"
+             >
+
+    <StackLayout Margin="10">
+        <ScrollView>
+            <StackLayout BackgroundColor="Transparent">
+                <Frame HorizontalOptions="Center" CornerRadius="40" BackgroundColor="#F5F5F5" Margin="10" >
+                    <Label Text="Nu se recomandă exercițiile fizice dacă nu vă simțiți bine sau dacă sunteți răciți!" TextColor="#696969" FontSize="16" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"></Label>
+                </Frame>
+
+                <!-- Ex 1 -->
+                <Frame WidthRequest="120" HeightRequest="100" HorizontalOptions="Start" CornerRadius="40" BackgroundColor="#F5F5F5" >
+                    <forms:AnimationView Animation="squatKick.json" AutoPlay="True" Loop="True" WidthRequest="200" HeightRequest="100" VerticalOptions="Center" HorizontalOptions="Center"></forms:AnimationView>
+                </Frame>
+
+                <StackLayout HorizontalOptions="Start" Margin="15">
+                    <Label Text="- 30 de repetări" TextColor="#696969" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Start"></Label>
+                    <Label Text="- se vor face doar 10 repetări pe set" TextColor="#696969" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Start"></Label>
+                    <Label Text="- pauză 2 minute între seturi" TextColor="#696969" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Start"></Label>
+                </StackLayout>
+
+                <!-- Ex 2 -->
+                <Frame WidthRequest="120" HeightRequest="100" HorizontalOptions="Start" CornerRadius="40" BackgroundColor="#F5F5F5" >
+                    <forms:AnimationView Animation="frogPress.json" AutoPlay="True" Loop="True" WidthRequest="200" HeightRequest="100" VerticalOptions="Center" HorizontalOptions="Center"></forms:AnimationView>
+                </Frame>
+
+                <StackLayout HorizontalOptions="Start" Margin="15">
+                    <Label Text="- 30 de repetări" TextColor="#696969" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Start"></Label>
+                    <Label Text="- se vor face doar 10 repetări pe set" TextColor="#696969" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Start"></Label>
+                    <Label Text="- pauză 2 minute între seturi" TextColor="#696969" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Start"></Label>
+                </StackLayout>
+
+                <!-- Ex 3 -->
+                <Frame WidthRequest="120" HeightRequest="100" HorizontalOptions="Start" CornerRadius="40" BackgroundColor="#F5F5F5" >
+                    <forms:AnimationView Animation="absCircle.json" AutoPlay="True" Loop="True" WidthRequest="200" HeightRequest="100" VerticalOptions="Center" HorizontalOptions="Center"></forms:AnimationView>
+                </Frame>
+
+                <StackLayout HorizontalOptions="Start" Margin="15">
+                    <Label Text="- 30 de repetări" TextColor="#696969" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Start"></Label>
+                    <Label Text="- se vor face doar 10 repetări pe set" TextColor="#696969" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Start"></Label>
+                    <Label Text="- pauză 2 minute între seturi" TextColor="#696969" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Start"></Label>
+                </StackLayout>
+
+                <!-- Ex 4 -->
+                <Frame WidthRequest="120" HeightRequest="100" HorizontalOptions="Start" CornerRadius="40" BackgroundColor="#F5F5F5">
+                    <forms:AnimationView Animation="reverseCrunches.json" AutoPlay="True" Loop="True" WidthRequest="200" HeightRequest="100" VerticalOptions="Center" HorizontalOptions="Center"></forms:AnimationView>
+                </Frame>
+
+                <StackLayout HorizontalOptions="Start" Margin="15">
+                    <Label Text="- 24 de repetări" TextColor="#696969" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Start"></Label>
+                    <Label Text="- se vor face doar 8 repetări pe set" TextColor="#696969" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Start"></Label>
+                    <Label Text="- pauză 2 minute între seturi" TextColor="#696969" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Start"></Label>
+                </StackLayout>
+
+                <!-- Ex 5 -->
+                <Frame WidthRequest="120" HeightRequest="100" HorizontalOptions="Start" CornerRadius="40" BackgroundColor="#F5F5F5">
+                    <forms:AnimationView Animation="tplank.json" AutoPlay="True" Loop="True" WidthRequest="200" HeightRequest="100" VerticalOptions="Center" HorizontalOptions="Center"></forms:AnimationView>
+                </Frame>
+
+                <StackLayout HorizontalOptions="Start" Margin="15">
+                    <Label Text="- 18 repetări" TextColor="#696969" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Start"></Label>
+                    <Label Text="- se vor face doar 6 repetări pe set" TextColor="#696969" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Start"></Label>
+                    <Label Text="- pauză 2 minute între seturi" TextColor="#696969" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Start"></Label>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+
+</ContentPage>

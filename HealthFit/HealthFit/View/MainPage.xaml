@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HealthFit"
+             x:Class="HealthFit.MainPage"
+             BackgroundColor="#FFDEAD"
+             NavigationPage.HasNavigationBar="False"  
+             xmlns:vm="clr-namespace:HealthFit.ViewModel"
+             Title="{Binding Title}"
+             >
+
+    <ContentPage.BindingContext>
+        <vm:MainPageViewModel></vm:MainPageViewModel>
+    </ContentPage.BindingContext>
+    
+    <StackLayout>
+        <Frame BackgroundColor="#F5F5F5" Padding="24" CornerRadius="0">
+            <Label Text="Health and Fit" HorizontalTextAlignment="Center" TextColor="#696969" FontSize="36" FontAttributes="Bold"/>
+        </Frame>
+
+        <Image Source="icon.png" VerticalOptions="Center" HeightRequest="64" WidthRequest="64"></Image>
+
+        <StackLayout BackgroundColor="#F5F5F5" Margin="20" Padding="20" HeightRequest="313">
+
+            <Label Text="Selectați profilul: " HorizontalTextAlignment="Center" TextColor="#696969" FontSize="24" FontAttributes="Bold"></Label>
+
+            <CollectionView x:Name="collectionView" Margin="20" SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="5">
+                            <Frame BackgroundColor="#FFDEAD" CornerRadius="30">
+                                <StackLayout>
+                                    <Label HorizontalTextAlignment="Center" FontSize="20" FontAttributes="Bold" TextColor="#696969">
+                                        <Label.Text>
+                                            <MultiBinding StringFormat="{}{0} {1}">
+                                                <Binding Path="NameF"></Binding>
+                                                <Binding Path="NameP"></Binding>
+                                            </MultiBinding>
+                                        </Label.Text>
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="SelectProfileTapGestureRecognizer_Tapped" CommandParameter="{Binding ID}" NumberOfTapsRequired="1" ></TapGestureRecognizer>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Label HorizontalOptions="Center" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Nu ai un profil făcut? Apasă aici pentru a face unul!" TextColor="#696969" FontSize="16" FontAttributes="Bold"></Span>
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="CreateProfileTapGestureRecognizer_Tapped" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+
+        <Frame BackgroundColor="#F5F5F5" CornerRadius="30" VerticalOptions="End" HorizontalOptions="Center">
+            <Button Text="Distribuie aplicația" HorizontalOptions="Center" TextColor="#696969" BackgroundColor="Transparent" Clicked="DistribuieButton_Clicked"></Button>
+        </Frame>
+        <Label Text="(!) - Aplicație mobilă dezvoltată pentru lucrarea de licență." TextColor="#696969" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="EndAndExpand" Padding="5"></Label>
+   
+    </StackLayout>
+
+</ContentPage>
+    
+<!--
+    bg culoare: 00994d
+    culoare frame: 00b359
+    culoare stacklayout mic(date): #1aff8c / veche: #99ffcc
+    PlaceholderColor="#F0FFF0"
+    -->

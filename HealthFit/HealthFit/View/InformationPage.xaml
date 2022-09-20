@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealthFit.View.InformationPage"
+             BackgroundColor="#FFDEAD"
+             xmlns:vm="clr-namespace:HealthFit.ViewModel"
+             >
+
+    <ContentPage.BindingContext>
+        <vm:InformationPageViewModel></vm:InformationPageViewModel>
+    </ContentPage.BindingContext>
+    
+    
+    <StackLayout Margin="10" BackgroundColor="Transparent">
+        <Frame BackgroundColor="#F5F5F5" Margin="20" CornerRadius="30">
+            <StackLayout>
+                <Label Text="Informații despre corpul tău" HorizontalTextAlignment="Center" HorizontalOptions="Center" FontAttributes="Bold" TextColor="#696969" FontSize="20" Margin="5"></Label>
+                <Label Text="- Editează -" HorizontalTextAlignment="Center" HorizontalOptions="Center" TextColor="#696969" FontSize="18"></Label>
+            </StackLayout>
+        </Frame>
+
+        <Frame BackgroundColor="#F5F5F5" Margin="10" CornerRadius="30">
+            <StackLayout BackgroundColor="Transparent">
+                <Label Text="Înălțime(cm): " HorizontalOptions="Start" FontAttributes="Bold" TextColor="#696969" FontSize="16" Margin="5"></Label>
+                <Entry x:Name="inaltimeEntry" TextColor="#696969" BackgroundColor="#FFDEAD" WidthRequest="50"></Entry>
+                <Button Text="Editează" TextColor="White" BackgroundColor="DarkOrange" Clicked="InaltimeButton_Clicked"></Button>
+
+                <Label Text="Greutate(kg): " HorizontalOptions="Start" FontAttributes="Bold" TextColor="#696969" FontSize="16" Margin="5"></Label>
+                <Entry x:Name="greutateEntry" TextColor="#696969" BackgroundColor="#FFDEAD" WidthRequest="50"></Entry>
+                <Button Text="Editează" TextColor="White" BackgroundColor="DarkOrange" Clicked="GreutateButton_Clicked"></Button>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+    
+    
+</ContentPage>

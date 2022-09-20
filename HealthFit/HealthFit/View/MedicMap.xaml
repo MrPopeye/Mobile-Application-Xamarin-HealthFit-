@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealthFit.View.MedicMap"
+             xmlns:vm="clr-namespace:HealthFit.ViewModel"
+             xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+             >
+
+
+    <ContentPage.BindingContext>
+        <vm:MedicMapViewModel></vm:MedicMapViewModel>
+    </ContentPage.BindingContext>
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Repere" Priority="0" Order="Primary"></ToolbarItem>
+        <ToolbarItem Text="Vezi spitale" Priority="1" Order="Secondary" Clicked="SpitaleToolbarItem_Clicked"></ToolbarItem>
+        <ToolbarItem Text="Vezi Farmacii" Priority="2" Order="Secondary" Clicked="PharmacyToolbarItem_Clicked"></ToolbarItem>
+        <ToolbarItem Text="Vezi Clinici Dentare" Priority="3" Order="Secondary" Clicked="DentistToolbarItem_Clicked" ></ToolbarItem>
+        <ToolbarItem Text="Vezi Clinici Oftalmologice" Priority="4" Order="Secondary" Clicked="OftalmologiceToolbarItem_Clicked" ></ToolbarItem>
+        <ToolbarItem Text="Vezi Clinici Medicale" Priority="5" Order="Secondary" Clicked="MedicaleToolbarItem_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <Grid>
+        <maps:Map x:Name="MedicsMap"></maps:Map>
+    </Grid>
+
+</ContentPage>
