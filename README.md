@@ -5,7 +5,7 @@ I used Xamarin to create the application and for the rest of the functions i use
 
 Screenshots:
 <br>
-<img src="Screenshots/1.jpeg" width="250">
+<img src="Screenshots/1.jpeg" width="350">
 ![](Screenshots/1.jpeg)
 ![](Screenshots/2.jpeg)
 ![](Screenshots/4.jpeg)
