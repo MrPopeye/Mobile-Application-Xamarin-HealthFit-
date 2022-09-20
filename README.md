@@ -6,8 +6,8 @@ I used Xamarin to create the application and for the rest of the functions i use
 Screenshots:
 <br>
 <img src="Screenshots/1.jpeg" width="350">
-![](Screenshots/1.jpeg)
-![](Screenshots/2.jpeg)
-![](Screenshots/4.jpeg)
-![](Screenshots/6.jpeg)
-![](Screenshots/17.jpeg)
+<img src="Screenshots/2.jpeg" width="350">
+<img src="Screenshots/4.jpeg" width="350">
+<img src="Screenshots/6.jpeg" width="350">
+<img src="Screenshots/17.jpeg" width="350">
+
