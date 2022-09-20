@@ -5,3 +5,7 @@ I used Xamarin to create the application and for the rest of the functions i use
 
 Screenshots:
 ![](Screenshots/1.jpeg)
+![](Screenshots/2.jpeg)
+![](Screenshots/4.jpeg)
+![](Screenshots/6.jpeg)
+![](Screenshots/17.jpeg)
