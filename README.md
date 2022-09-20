@@ -4,4 +4,4 @@ The application (Android) allows the user to store information about his body (h
 I used Xamarin to create the application and for the rest of the functions i used Xamarin Google Maps & API Map (location health institutions and map rendering) , Android Lottie (the animations from the workout plan).
 
 Screenshots:
-![](Screanshots/1.jpeg)
+![](Screenshots/1.jpeg)
