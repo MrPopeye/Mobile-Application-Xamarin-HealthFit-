@@ -10,4 +10,4 @@ Screenshots:
 <img src="Screenshots/4.jpeg" width="325">
 <img src="Screenshots/6.jpeg" width="325">
 <img src="Screenshots/17.jpeg" width="325">
-<img src="Screenshots/24.jpeg" width="350">
+<img src="Screenshots/24.jpeg" width="325">
